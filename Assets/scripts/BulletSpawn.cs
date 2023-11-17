@@ -18,10 +18,11 @@ public class Shooting : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Instantiate(bullet);
-            // Add movement
+            
+            Instantiate(bullet, transform.position + new Vector3(1, 0, 0), Quaternion.identity);
+            
         }
 
     }
