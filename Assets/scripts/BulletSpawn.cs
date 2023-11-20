@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class BulletSpawn : MonoBehaviour
 {
 
     [SerializeField]
@@ -21,7 +21,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             
-            Instantiate(bullet, transform.position + new Vector3(1, 0, 0), Quaternion.identity);
+            Instantiate(bullet, transform.position + new Vector3(0, 0, 1), Quaternion.identity);
             
         }
 

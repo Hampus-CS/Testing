@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shoot : MonoBehaviour
+public class BulletMovement : MonoBehaviour
 {
     Rigidbody RigBod;
     
@@ -12,7 +12,7 @@ public class Shoot : MonoBehaviour
         
         RigBod = GetComponent<Rigidbody>();
 
-        RigBod.velocity = new Vector3(10, 0, 0);
+        RigBod.velocity = new Vector3(0, 0, 10);
 
     }
 

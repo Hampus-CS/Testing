@@ -25,6 +25,8 @@ public class Moving : MonoBehaviour
         }
 
     }
+    
+    // FixedUpdate is called on a set amout of frames
     private void FixedUpdate()
     {
 
