@@ -21,4 +21,28 @@ public class BulletMovement : MonoBehaviour
     {
         
     }
+
+    //
+    void OnCollisionEnter(Collision collision)
+    {
+
+        Debug.Log("Träff");
+
+        Destroy(gameObject);
+        
+        if (collision.gameObject.name == "Enemy")
+        {
+            
+            //Anrop på TakeDamage metod.
+          
+            
+
+
+        }
+        
+
+
+
+    }
+
 }
