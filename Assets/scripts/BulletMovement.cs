@@ -29,17 +29,14 @@ public class BulletMovement : MonoBehaviour
         Debug.Log("Träff");
 
         Destroy(gameObject);
+
+        GameObject otherGameObject = collision.gameObject;
+        Enemy hitEnemy = otherGameObject.GetComponent.<Enemy>();
         
-        if (collision.gameObject.name == "Enemy")
+        if(hitEnemy != null)
         {
-            
-            //Anrop på TakeDamage metod.
-          
-            
-
-
+            hitEnemy.TakeDamage();
         }
-        
 
 
 
