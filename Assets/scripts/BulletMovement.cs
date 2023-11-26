@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
     Rigidbody RigBod;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,16 +29,13 @@ public class BulletMovement : MonoBehaviour
         //Debug.Log("Träff");
 
         GameObject otherGameObject = collision.gameObject;
-        Enemy hitEnemy = otherGameObject.GetComponent<Enemy>();
+        EnemyScript hitEnemy = otherGameObject.GetComponent<EnemyScript>();
         
         if(hitEnemy != null)
         {
-            
-            hitEnemy.TakeDamage();
-            
+            hitEnemy.TakeDamage();   
         }
         Destroy(gameObject);
-
 
     }
 

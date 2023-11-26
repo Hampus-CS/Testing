@@ -20,10 +20,9 @@ public class BulletSpawn : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            
-            Instantiate(bullet, transform.position + new Vector3(0, 0, 1), Quaternion.identity);
-            
+            Instantiate(bullet, transform.position + new Vector3(0, 0, 1), Quaternion.identity);   
         }
 
     }
+
 }
