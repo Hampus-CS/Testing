@@ -26,18 +26,18 @@ public class BulletMovement : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
 
-        Debug.Log("Träff");
-
-        Destroy(gameObject);
+        //Debug.Log("Träff");
 
         GameObject otherGameObject = collision.gameObject;
-        Enemy hitEnemy = otherGameObject.GetComponent.<Enemy>();
+        Enemy hitEnemy = otherGameObject.GetComponent<Enemy>();
         
         if(hitEnemy != null)
         {
+            
             hitEnemy.TakeDamage();
+            
         }
-
+        Destroy(gameObject);
 
 
     }
