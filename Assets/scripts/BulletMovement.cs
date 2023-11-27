@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    Rigidbody RigBod;
+    Rigidbody RB;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        RigBod = GetComponent<Rigidbody>();
-
-        RigBod.velocity = new Vector3(0, 0, 10);
 
     }
 
@@ -23,10 +19,19 @@ public class BulletMovement : MonoBehaviour
     }
 
     //
+    public void Fire(Vector3 direction)
+    {
+
+        RB = GetComponent<Rigidbody>();
+        RB.AddForce(direction, ForceMode.Impulse);
+    
+    }
+    
+    //
     void OnCollisionEnter(Collision collision)
     {
 
-        //Debug.Log("Träff");
+        //Om man vill se i konsolen att skottet träffar så använder man: Debug.Log("Träff");
 
         GameObject otherGameObject = collision.gameObject;
         EnemyScript hitEnemy = otherGameObject.GetComponent<EnemyScript>();
